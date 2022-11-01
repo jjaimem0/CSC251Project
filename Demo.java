@@ -14,6 +14,7 @@ public class Demo
       String poliHoldName;
       String poliHoldLastName;
       int poliHoldAge;
+      int smoker = 0, nonSmoker = 0;
       String smokingStatus;
       double poliHoldHeight;
       double poliHoldWeight;
@@ -41,8 +42,6 @@ public class Demo
          poliHoldWeight = inputFile.nextDouble();
       
          Policy pHolder = new Policy(poliNumber, providerName, poliHoldName, poliHoldLastName, poliHoldAge, smokingStatus, poliHoldHeight, poliHoldWeight);
-                 
-         System.out.println();
          
          policyList.add(pHolder);
          
@@ -58,11 +57,25 @@ public class Demo
             System.out.println("PolicyHolder's Weight: " + pHolder.getPoliHoldWeight() + " pounds");
             System.out.printf("Policyholder's BMI: %.2f\n", pHolder.getBMI());
             System.out.printf("Policy Price: $%.2f\n", pHolder.getPrice());
+            
+            if(smokingStatus.equalsIgnoreCase("SMOKER"))
+            {
+               smoker++;
+            }
+            else
+            {
+               nonSmoker++;
+            }
          }
-      if (inputFile.hasNext()) {
-    inputFile.nextLine();
-    inputFile.nextLine();
-}
+      if (inputFile.hasNext()) 
+      {
+         inputFile.nextLine();
+         inputFile.nextLine();
+      }
+      System.out.println();
+      System.out.println("The number of policies with a smoker is: " + smoker);
+      System.out.println("The number of policies with a non-smoker is: " + nonSmoker);
+      
       }
       inputFile.close();
    }// main ends
