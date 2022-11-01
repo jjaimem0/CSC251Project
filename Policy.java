@@ -137,7 +137,7 @@ public class Policy
    }// getPoliHoldWeight ends
    
    /*//////////////////////////////////////////////////
-   // This method Calculates the policy holders BMI. //
+   // This method calculates the policy holders BMI. //
    // @param poliHoldWeight - policy holders weight  //
    // @param poliHoldHeight - policy holders height  //
    // @return BMI                                    //
@@ -150,7 +150,7 @@ public class Policy
    } // getBMI ends
    
   /*//////////////////////////////////////////////////
-  // This method Calculates the price of the policy.//
+  // This method calculates the price of the policy.//
   // @param poliHoldAge - age of policy holder      //
   // @param smokingStatus - smoking status of       //
   // policy holder.                                 //
